@@ -1,5 +1,5 @@
 var config = {
-    style: 'mapbox://styles/omarchen1/cka6amkwo0dmm1imoom0ed0l6',
+    style: 'mapbox://styles/mapbox/satellite-streets-v11?optimize=true',
     accessToken: 'pk.eyJ1Ijoib21hcmNoZW4xIiwiYSI6ImNrYTY5dXM0NTA0cGwyd3Mwb2k3cTZweDUifQ.zQl5IoVzs7iwg8FNZMPLUQ',
     showMarkers: false,
     theme: 'light',
