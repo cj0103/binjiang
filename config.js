@@ -153,7 +153,7 @@ var config = {
             },
             onChapterEnter: [],
             onChapterExit: []
-        }
+        },
         {
             id: '11',
             title: '三会苑',
@@ -167,7 +167,7 @@ var config = {
             },
             onChapterEnter: [],
             onChapterExit: []
-        }
+        },
         {
             id: '11',
             title: '后记',
