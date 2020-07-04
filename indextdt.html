@@ -4,14 +4,12 @@
     <meta charset='utf-8' />
     <title>[四史教育]五里桥街道滨江党性教育现场教学点介绍</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-    <link rel="stylesheet" href="./js/leaflet.css" />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
     <script src="./js/leaflet.js"></script>
-    <script src="./js/proj4.js"></script>
-    <script src="./js/proj4leaflet.min.js"></script>
-    <script type="text/javascript" src='./js/leaflet.ChineseTmsProviders.js'></script>
     <script src="./js/intersection-observer.js"></script>
     <script src="./js/scrollama.js"></script>
-
+    </script>
     <style>
         body {
             margin:0; 
@@ -99,9 +97,8 @@
 
 <div id="map"></div>
 <div id="story"></div>
-<script src="./configtdj.js"></script>
+<script src="./configtdt.js"></script>
 <script>
-   
 var layerTypes = {
     'fill': ['fill-opacity'],
     'line': ['line-opacity'],
@@ -209,7 +206,7 @@ if (footer.innerText.length > 0) {
     story.appendChild(footer);
 }
 
-//mapboxgl.accessToken = config.accessToken;
+mapboxgl.accessToken = config.accessToken;
 
 const transformRequest = (url) => {
     const hasQuery = url.indexOf("?") !== -1;	  
@@ -218,27 +215,8 @@ const transformRequest = (url) => {
       url: url + suffix
     }	  
 }
-var imgm = L.tileLayer.chinaProvider('TianDiTu.Satellite.Map',),
-    imga = L.tileLayer.chinaProvider('TianDiTu.Satellite.Annotion',);
 
-var image = L.layerGroup([imgm, imga]);
-    var map = L.map("map", {
-    center: config.chapters[0].location.center,
-    zoom: config.chapters[0].location.zoom,
-    bearing: config.chapters[0].location.bearing,
-    pitch: config.chapters[0].location.pitch,
-    //zoom: 16,
-    layers: [image],
-   // maxBounds: bounds,
-    zoomControl: false,
-    transformRequest: transformRequest
-});
-var marker = new L.Marker();
-if (config.showMarkers) {
-    marker.setLngLat(config.chapters[0].location.center).addTo(map);
-}
-
-/*var map = new mapboxgl.Map({
+var map = new mapboxgl.Map({
     container: 'map',
     style: config.style,
     center: config.chapters[0].location.center,
@@ -249,11 +227,11 @@ if (config.showMarkers) {
     transformRequest: transformRequest
 });
 
+
 var marker = new mapboxgl.Marker();
 if (config.showMarkers) {
     marker.setLngLat(config.chapters[0].location.center).addTo(map);
 }
-*/
 
 // instantiate the scrollama
 var scroller = scrollama();
