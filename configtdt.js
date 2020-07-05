@@ -1,28 +1,40 @@
-var config = {
+﻿var config = {
     //style: 'mapbox://styles/mapbox/satellite-streets-v11?optimize=true',
     accessToken: 'pk.eyJ1Ijoib21hcmNoZW4xIiwiYSI6ImNrYTY5dXM0NTA0cGwyd3Mwb2k3cTZweDUifQ.zQl5IoVzs7iwg8FNZMPLUQ',
        style: {
         "version": 8,
         "sources": {
+              
             "raster-tiles": {
                 "type": "raster",
                 "tiles": ['http://t0.tianditu.com/DataServer?T=img_w&x={x}&y={y}&l={z}&tk=a7677ff5620ed13810c92d9ef7f528ea'],
+              
                 "tileSize": 256,
-            }, 
-            "cia-tiles": {
+            },
+ "ciatiles": {
                 "type": "raster",
                 "tiles": ['http://t0.tianditu.com/DataServer?T=cia_w&x={x}&y={y}&l={z}&tk=a7677ff5620ed13810c92d9ef7f528ea'],
-                "tileSize": 256,
+                "tileSize": 256
             }
+          
         },
                        
-        "layers": [{
-            "id": "tdt-img-tiles",
+        "layers": [ 
+          {
+            "id": "raster-tiles",
             "type": "raster",
             "source": "raster-tiles",
-            "minzoom": 0,
+            "minzoom": 10,
+            "maxzoom": 19,
+        } , 
+{
+            "id": "ciatiles",
+            "type": "raster",
+            "source": "ciatiles",
+            "minzoom": 10,
             "maxzoom": 19
-        }]
+        }     
+        ]
      
     },
 
@@ -58,7 +70,7 @@ var config = {
             description: '江南造船厂是我国近代船舶工业发展的一个重要里程碑，是上海工人阶级的摇篮，也是我国现代造船工业发展的重要基地。因举办上海世博会的需要，造船基地迁往长兴岛。现如今在具有一百多年历史的江南造船厂的旧址上，建立了中国船舶馆，该展馆对江南造船厂原址的一个厂房进行了重新优化设计和改造，改造后的展馆呈长方形结构，增添了弧线构架，形似船的龙骨，突出船舶馆的企业形象；又形似龙的脊梁，借喻中国民族工业坚强的精神。',
             location: {
                 center: [121.48871, 31.19794],
-                zoom: 17.05,
+                zoom: 17.45,
                 pitch: 60,
                 bearing: 32.1
             },
@@ -161,7 +173,7 @@ var config = {
             description: '国际乒联博物馆于2003年在瑞士洛桑成立，2013年5月国际乒联正式宣布将位于瑞士洛桑的国际乒联博物馆迁往中国上海，将国际乒联博物馆和原定计划建设的中国乒乓球博物馆进行“两馆合一建设”。新落成的“乒博馆”位于上海市黄浦区世博园地块，占地面积5000平方米，总建筑面积10389平方米。馆内设置陈列展览区、公众服务区、体验互动区、藏品技术区、教育研究区等区域，共有藏品12000余件，并配有先进的VR互动体验区、多媒体互动区和3D影院。是第一个引入中国的国际级体育类专业博物馆和国际体育组织所属博物馆在异地建设发展的项目。',
             location: {
                 center: [ 121.47717, 31.19447 ],
-                zoom: 17,
+                zoom: 17.45,
                 pitch: 58.5,
                 bearing: -12
             },
