@@ -3,17 +3,15 @@
     accessToken: 'pk.eyJ1Ijoib21hcmNoZW4xIiwiYSI6ImNrYTY5dXM0NTA0cGwyd3Mwb2k3cTZweDUifQ.zQl5IoVzs7iwg8FNZMPLUQ',
        style: {
         "version": 8,
-        "sources": {
-              
+        "sources": {              
             "raster-tiles": {
                 "type": "raster",
-                "tiles": ['http://t0.tianditu.com/DataServer?T=img_w&x={x}&y={y}&l={z}&tk=a7677ff5620ed13810c92d9ef7f528ea'],
-              
-                "tileSize": 256,
+                "tiles": ['https://t0.tianditu.gov.cn/DataServer?T=img_w&x={x}&y={y}&l={z}&tk=a7677ff5620ed13810c92d9ef7f528ea'],
+                              "tileSize": 256,
             },
  "ciatiles": {
                 "type": "raster",
-                "tiles": ['http://t0.tianditu.com/DataServer?T=cia_w&x={x}&y={y}&l={z}&tk=a7677ff5620ed13810c92d9ef7f528ea'],
+                "tiles": ['https://t0.tianditu.gov.cn/DataServer?T=cia_w&x={x}&y={y}&l={z}&tk=a7677ff5620ed13810c92d9ef7f528ea'],
                 "tileSize": 256
             }
           
